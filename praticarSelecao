@@ -1,0 +1,61 @@
+def add(a, b):
+    return a + b
+
+def sub(a, b):
+    return a - b
+
+def mult(a, b):
+    return a * b
+
+def div(a, b):
+    return a / b
+
+def main():
+
+    print("Selecione uma opção:")
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
+    print("5. Exit")
+
+    selection = int(input("Insert the number corresponding to the operation desired:"))
+    if selection >= 6 or selection < 1:
+        print ("Invalid number, closing program:")
+        quit()
+
+    elif selection == 5:
+        print ("Closing program:")
+        quit()
+        
+    number1 = float(input("Instert the first number:"))
+    number2 = float(input("Insert the second number"))
+
+    if selection == 1:
+        result = add(number1, number2)
+        print("the summ of the numbers is:", result)
+
+    elif selection == 2:
+        result = sub(number1, number2)
+        print("the subtraction of the numbers is:", result)
+
+    elif selection == 3:
+        result = mult(number1, number2)
+        print("the multiplication of the numbers is:", result)
+
+    elif selection == 4:
+        result = div(number1, number2)
+        print("the division of the numbers is:", result)
+
+
+    restart = input("\nDo you want to perform another operation? (y/n): ").lstrip().lower()
+    if restart == "y":
+        main()
+    else:
+        print ("Closing program:")
+        quit()
+
+main()
+
+
+
